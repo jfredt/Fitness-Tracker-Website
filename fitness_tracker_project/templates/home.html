@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker</title>
+</head>
+<body>
+    <h1>Welcome to the Fitness Tracker</h1>
+    <ul>
+        {% for exercise in exercises %}
+        <li>
+            <a href="/exercise/{{ exercise.id }}">{{ exercise.name }} - Burns {{ exercise.calories_burned }} calories</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
